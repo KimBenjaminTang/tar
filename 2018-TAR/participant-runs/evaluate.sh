@@ -25,7 +25,7 @@ for filename in $(find * | grep "task1$"); do
    while read  qid metric score ; do
         hashmap["$metric"]="$score"
    done < ${filename}".out"
-   echo "${filename} ${hashmap["num_rels"]} ${hashmap["rels_found"]} ${hashmap["last_rel"]} ${hashmap["norm_last_rel"]} ${hashmap["ap"]} ${hashmap["recall@50"]} ${hashmap["recall@100"]} ${hashmap["recall@200"]} ${hashmap["recall@300"]} ${hashmap["recall@400"]} ${hashmap["recall@500"]} ${hashmap["recall@1000"]} ${hashmap["recall@2000"]} ${hashmap["recall@5000"]} ${hashmap["recall_at_threshold"]} ${hashmap["recall_threshold"]}" >> task1.out.all
+   echo "${filename} ${hashmap["num_rels"]} ${hashmap["rels_found"]} ${hashmap["last_rel"]} ${hashmap["norm_last_rel"]} ${hashmap["ap"]} ${hashmap["recall@10"]} ${hashmap["recall@20"]} ${hashmap["recall@30"]} ${hashmap["recall@40"]} ${hashmap["recall@50"]} ${hashmap["recall@100"]} ${hashmap["recall@200"]} ${hashmap["recall@300"]} ${hashmap["recall@400"]} ${hashmap["recall@500"]} ${hashmap["recall@1000"]} ${hashmap["recall@2000"]} ${hashmap["recall@5000"]} ${hashmap["recall_at_threshold"]} ${hashmap["recall_threshold"]}" >> task1.out.all
 done
 
 fi
